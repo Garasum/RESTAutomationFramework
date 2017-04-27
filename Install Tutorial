@@ -1,0 +1,41 @@
+pip install requests
+pip install -U pytest
+
+	
+
+(if you are using PyCharm - Ctr+Shift+S -> Project -> Project Interpreter -> Install Packages)
+
+http://stackoverflow.com/questions/6397063/how-do-i-configure-pycharm-to-run-py-test-tests
+How do I configure PyCharm to run py.test tests?
+	Please go to File | Settings | Tools | Python Integrated Tools and change the default test runner to py.test. Then you'll get the py.test option to create tests instead of the unittest one.
+
+
+Установка Allure Commandline
+	Download the latest version as zip archive from https://github.com/allure-framework/allure-core/releases/latest16.
+	Unpack the archive to allure-commandline directory.
+	Navigate to bin directory.
+	Use allure.bat for Windows and allure for other Unix platforms.
+
+		https://github.com/baev/allure-cli-depricated/issues/20
+		usually you should either specify full path to bat file or add directory with bat file to Windows PATH environment variable.
+
+	Установка allure-adaptor для #pytest
+
+	pip install pytest-allure-adaptor
+	Использование:
+
+	py.test --alluredir [path_to_report_dir]
+	allure generate directory-with-results/
+	P.S.: Еще советую посмотреть статью от Яндекса: https://habrahabr.ru/company/yandex/blog/242795/44
+
+___________________________________________________________________________________________________
+
+To Run Tests:	
+	python -m pytest tests --alluredir {path to directory}
+	allure generate {path to directory}
+
+For Example:
+
+	python -m pytest tests --alluredir report
+	allure generate report
+
