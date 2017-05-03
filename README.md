@@ -34,3 +34,6 @@ https://github.com/baev/allure-cli-depricated/issues/20
 You should either specify full path to bat file or add directory with bat file to Windows PATH environment variable.
   
 https://habrahabr.ru/company/yandex/blog/242795/44
+
+allure-report-nothing-shown-in-chrome
+http://stackoverflow.com/questions/23997449/allure-report-nothing-shown-in-chrome
